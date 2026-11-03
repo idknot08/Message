@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #define IDD_CHAT 101
 #define IDC_NAME 1001
 #define IDC_IP 1002
@@ -20,3 +20,16 @@
 #define IDC_MODE 1016
 #define IDC_CONFIRM 1017
 #define IDC_CONFIRM_LABEL 1018
+
+#ifndef IDC_STATIC
+#define IDC_STATIC -1
+#endif
+
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE 103
+#define _APS_NEXT_COMMAND_VALUE 40001
+#define _APS_NEXT_CONTROL_VALUE 1019
+#define _APS_NEXT_SYMED_VALUE 103
+#endif
+#endif

@@ -1,9 +1,5 @@
-#pragma once
-#define VC_EXTRALEAN
-#define WIN32_LEAN_AND_MEAN
-#define NOMINMAX
-#include <afxwin.h>
-#include <afxcmn.h>
+﻿#pragma once
+#include "framework.h"
 #include <deque>
 #include <mutex>
 #include "ChatConnection.h"
