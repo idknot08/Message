@@ -57,7 +57,8 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation Condition="'$(Configuration)'=='Debug'">true</GenerateDebugInformation>
+      <GenerateDebugInformation Condition="'$(Configuration)'=='Release'">false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -79,5 +80,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="CopyClientConfig" AfterTargets="Build">
+    <Copy SourceFiles="$(ProjectDir)client.ini" DestinationFolder="$(OutDir)" Condition="!Exists('$(OutDir)client.ini')" />
+  </Target>
+  <ItemGroup><None Include="client.ini" /></ItemGroup>
   <ImportGroup Label="ExtensionTargets" />
 </Project>
